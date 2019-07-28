@@ -10,7 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class MyServlet extends HttpServlet {
-	@Override
+	/**
+   * 
+   */
+  private static final long serialVersionUID = -2398212252208171044L;
+
+  @Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("get获取");
 		resp.setContentType("text/html;charset=UTF-8");
