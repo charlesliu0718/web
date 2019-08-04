@@ -12,7 +12,7 @@
 	<!-- 简化配置： (1)自动注册DefaultAnootationHandlerMapping,AnotationMethodHandlerAdapter (2)提供一些列：数据绑定，数字和日期的format @NumberFormat, @DateTimeFormat, xml,json默认读写支持 -->
 	<mvc:annotation-driven />
 
-	<!-- 2.静态资源默认servlet配置 (1)加入对静态资源的处理：js,gif,png (2)允许使用"/"做整体映射 -->
+	<!-- 2.静态资源默认servlet配置 (1)加入对静态资源的处理：js,gif,png (2)允许使用"/"做整体映射 （3）不被dispatchServlet给拦截，交给默认servlet处理 -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:default-servlet-handler />
 
@@ -36,6 +36,6 @@
 			</list>
 		</property>
 	</bean>
-	<!-- 4.扫描controller相关的bean -->
-	<context:component-scan base-package="com.chaos.app.person.controller" />
+	<!-- 4.扫描web相关的bean -->
+	<context:component-scan base-package="com.chaos.app.person.web" />
 </beans>

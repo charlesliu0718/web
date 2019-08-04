@@ -1,4 +1,4 @@
-package com.chaos.app.person.controller;
+package com.chaos.app.person.web;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

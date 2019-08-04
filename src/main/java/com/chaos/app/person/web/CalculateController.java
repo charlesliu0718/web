@@ -1,4 +1,4 @@
-package com.chaos.app.person.controller;
+package com.chaos.app.person.web;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

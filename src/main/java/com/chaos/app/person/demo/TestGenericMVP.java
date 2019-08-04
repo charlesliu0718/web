@@ -1,7 +1,6 @@
 package com.chaos.app.person.demo;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.logging.Logger;
 
 
 public class TestGenericMVP<T> {
@@ -13,7 +12,7 @@ public class TestGenericMVP<T> {
 		return string;
 	}
 	
-	private static final Logger logger = LoggerFactory.getLogger(TestGenericMVP.class);
+	private static final Logger logger = Logger.getLogger("TestGenericMVP");
 	
 	public static void main(String[] args) {
 		Integer first = 71;
