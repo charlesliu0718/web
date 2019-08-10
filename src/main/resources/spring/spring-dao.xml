@@ -44,7 +44,7 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- 注入sqlSessionFactory -->
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-		<!-- 给出需要扫描Dao接口包 -->
-		<property name="basePackage" value="com.chaos.app.person.dao" />
+		<!-- 给出需要扫描mapper接口包 -->
+		<property name="basePackage" value="com.chaos.app.person.mapper" />
 	</bean>
 </beans>
