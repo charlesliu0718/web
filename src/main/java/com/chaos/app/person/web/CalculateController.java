@@ -17,8 +17,8 @@ public class CalculateController {
 	// 真正导致不能弹出的是produces = "application/json"，目前使用text/html可以解决返回String时不弹窗的问题
 
 	// @RequestMapping("/calculate")
-	@RequestMapping(value = "calculate",produces = "text/html; charset=utf-8")
-	@ResponseBody
+	@RequestMapping(value = "calculate", produces = "text/html; charset=utf-8")
+	@ResponseBody // 返回结果的json转换
 	public Object login1(HttpServletRequest request, HttpServletResponse response) {
 
 		int num1 = Integer.parseInt(request.getParameter("num1"));
@@ -28,9 +28,9 @@ public class CalculateController {
 		System.out.println(num2);
 
 		// 下面三行搭配RequestMapping中加入application/json; charset=utf-8，可以解决乱码弹出问题
-//		HttpHeaders responseHeaders = new HttpHeaders();
-//		responseHeaders.setContentType(new MediaType("text", "html", Charset.forName("UTF-8")));
-//		return new ResponseEntity<String>("和为：" + (num1 + num2), responseHeaders, HttpStatus.OK);
+		// HttpHeaders responseHeaders = new HttpHeaders();
+		// responseHeaders.setContentType(new MediaType("text", "html", Charset.forName("UTF-8")));
+		// return new ResponseEntity<String>("和为：" + (num1 + num2), responseHeaders, HttpStatus.OK);
 		return "和为：" + (num1 + num2);
 	}
 }
