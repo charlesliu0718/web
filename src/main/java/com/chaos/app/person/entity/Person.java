@@ -142,4 +142,19 @@ public class Person {
     public void setAdvice(String advice) {
         this.advice = advice == null ? null : advice.trim();
     }
+
+    @Override
+    public String toString() {
+      StringBuilder builder = new StringBuilder();
+      builder.append("Person [personId=").append(personId).append(", userId=").append(userId)
+          .append(", areaId=").append(areaId).append(", personCategoryId=").append(personCategoryId)
+          .append(", personName=").append(personName).append(", personDesc=").append(personDesc)
+          .append(", personAddr=").append(personAddr).append(", phone=").append(phone)
+          .append(", personImg=").append(personImg).append(", priority=").append(priority)
+          .append(", createTime=").append(createTime).append(", updateTime=").append(updateTime)
+          .append(", recordStatus=").append(recordStatus).append(", advice=").append(advice)
+          .append("]");
+      return builder.toString();
+    }
+    
 }
